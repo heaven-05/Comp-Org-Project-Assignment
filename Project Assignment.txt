@@ -64,3 +64,8 @@
 
         li $v0, 1                 # return value for terminal condition
         blez $s0, fibonacciExit   # check terminal condition
+	addi $a0, $s0, -1         # set arguments for recursive call to f(n-1)
+        jal fibonacci
+        move $s1, $v0             # save result of f(n-1) to s1
+        addi $a0, $s0, -2         # set arguments for recursive call to f(n-2)
+        jal fibonacci
