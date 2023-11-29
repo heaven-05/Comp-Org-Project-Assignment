@@ -29,3 +29,8 @@
 	    #if input is legal
 	
         valid:
+	    li $v0, 4                 # sys call 4 -> register v0
+            la $a0, valid             # legal address -> register a0
+	    la $a0, legal	      # legal console text -> register a0
+            syscall                   # print text for legal number
+        
