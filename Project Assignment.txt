@@ -49,4 +49,8 @@
             move $a0, $v0	      # move a0 -> v0
             li $v0, 1		      # sys call 1 -> register v0
             syscall		      # perform system call
-	    
+
+            li $v0, 10                # sys call 10 -> register v0 
+            syscall                   # exit program
+            
+    # Fibonacci function
