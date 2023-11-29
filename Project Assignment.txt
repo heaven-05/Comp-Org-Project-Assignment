@@ -1,0 +1,9 @@
+# text output for different functions
+
+.data 										
+
+    prompt: .asciiz "\nEnter a positive number greater than or equal to 25: "	#console text for prompt, when the user runs program
+    illegal:  .asciiz "Illegal Number!"						#console text for if input is invalid
+    legal: .asciiz "This number is legal!"					#console text for if input is valid
+    fibResults:  .asciiz "\nThe fibonacci sequence of this number is: "		#console text for fibonacci sequence calculation
+
