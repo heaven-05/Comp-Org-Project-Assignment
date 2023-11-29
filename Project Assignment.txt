@@ -7,3 +7,11 @@
     legal: .asciiz "This number is legal!"					#console text for if input is valid
     fibResults:  .asciiz "\nThe fibonacci sequence of this number is: "		#console text for fibonacci sequence calculation
 
+# functions
+
+.text
+.globl main
+    main:
+        # loop to see if input is legal (greater than/equal to 25)
+
+        while:
