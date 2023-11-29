@@ -69,3 +69,9 @@
         move $s1, $v0             # save result of f(n-1) to s1
         addi $a0, $s0, -2         # set arguments for recursive call to f(n-2)
         jal fibonacci
+	add $v0, $s1, $v0         # add result of f(n-1) to sum
+    
+    fibonacciExit:
+        lw $ra, 0($sp)
+        lw $s0, 4($sp)
+        lw $s1, 8($sp)
