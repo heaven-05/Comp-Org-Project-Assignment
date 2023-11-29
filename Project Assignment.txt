@@ -44,3 +44,9 @@
 
 
 	    move $a0, $t2             # move v0 -> a0
+
+ 	    jal fibonacci             # jump and link to fibonacci function
+            move $a0, $v0	      # move a0 -> v0
+            li $v0, 1		      # sys call 1 -> register v0
+            syscall		      # perform system call
+	    
