@@ -21,3 +21,11 @@
 
             li $v0, 5                	 # sys call 5 -> register v0 
             syscall                	     # read input
+
+            move $t2, $v0            	 # move v0 -> t2
+            blt $t2, 25, illegal_input   # if input less than 25, it's illegal
+	
+
+	    #if input is legal
+	
+        valid:
