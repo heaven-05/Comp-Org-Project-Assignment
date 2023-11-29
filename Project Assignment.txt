@@ -81,3 +81,7 @@
     # Error text for invalid input
     illegal_input:
         li $v0, 4                 # sys call 4 -> register v0
+	la $a0, illegal           # error text -> register a0
+        syscall                   # perform sys call
+        
+        j while                   # return to the beginning of the loop
