@@ -15,3 +15,9 @@
         # loop to see if input is legal (greater than/equal to 25)
 
         while:
+            li $v0, 4                	 # sys call 4 -> register v0 
+            la $a0, prompt           	 # prompt address -> register a0
+            syscall                 	 # print prompt
+
+            li $v0, 5                	 # sys call 5 -> register v0 
+            syscall                	     # read input
