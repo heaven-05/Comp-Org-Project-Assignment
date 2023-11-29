@@ -75,3 +75,9 @@
         lw $ra, 0($sp)
         lw $s0, 4($sp)
         lw $s1, 8($sp)
+	addi $sp, $sp, 12
+        jr $ra
+
+    # Error text for invalid input
+    illegal_input:
+        li $v0, 4                 # sys call 4 -> register v0
