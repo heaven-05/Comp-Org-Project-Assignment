@@ -34,3 +34,13 @@
 	    la $a0, legal	      # legal console text -> register a0
             syscall                   # print text for legal number
         
+# exit main
+
+        exit:
+           
+            li $v0, 4                 # sys call 4 -> register v0
+            la $a0, fibResults        # fib seq text -> register a0
+            syscall                   # print fib seq text
+
+
+	    move $a0, $t2             # move v0 -> a0
